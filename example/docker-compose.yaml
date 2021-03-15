@@ -1,0 +1,11 @@
+version: "3"
+services:
+  dart_autoreload:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./app/bin/:/app/bin/
+      - ./app/pubspec.yaml:/app/pubspec.yaml
+    container_name: dart_autoreload
